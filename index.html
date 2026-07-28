@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>작은 자장가 | 수면 타이머·자연음 플레이어</title>
+    <meta name="description" content="잠들기 전 편안하게 들을 자장가, 클래식, 자연음을 골라보세요. 재생 시간 타이머와 즐겨찾기를 지원하는 무료 웹 자장가 플레이어입니다." />
+    <link rel="canonical" href="https://" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="MicroRegalo" />
+    <meta property="og:title" content="작은 자장가 | 수면 타이머·자연음 플레이어" />
+    <meta property="og:description" content="자장가, 클래식, 자연음을 골라 듣고 재생 타이머를 설정할 수 있는 무료 웹 플레이어입니다." />
+    <meta property="og:url" content="https://" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="작은 자장가 | 수면 타이머·자연음 플레이어" />
+    <meta name="twitter:description" content="자장가, 클래식, 자연음을 골라 듣고 재생 타이머를 설정할 수 있는 무료 웹 플레이어입니다." />
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="app-nav.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="apps.js" defer></script>
+    <script src="app-nav.js" defer></script>
+
+</head>
+<body>
+<main class="lullaby-page">
+    <header class="app-header">
+        <span id="app-title">작은 자장가</span>
+        <div class="header-tools">
+            <select id="language-select" class="language-select" aria-label="언어 선택"></select>
+            <div data-app-nav data-app-nav-home-only="true" data-app-base="./"></div>
+        </div>
+    </header>
+
+    <section id="player-panel" class="player-panel" aria-label="현재 재생">
+        <button id="ring-button" class="ring-wrap" type="button" aria-label="재생 또는 일시정지">
+            <svg class="ring-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-bg" cx="50" cy="50" r="42"></circle>
+                <circle id="ring-progress" class="ring-progress" cx="50" cy="50" r="42"></circle>
+            </svg>
+            <span class="ring-center">
+          <span id="ring-icon" class="ring-icon">♪</span>
+          <span id="ring-time" class="ring-time">∞</span>
+        </span>
+        </button>
+
+        <div class="now-info">
+            <p id="page-eyebrow" class="eyebrow">Lullaby Player</p>
+            <h1 id="current-title">음악을 선택하세요</h1>
+            <p id="current-meta">첫 화면에서는 음원을 내려받지 않습니다. 곡을 누르면 재생을 시작합니다.</p>
+            <div class="player-actions">
+                <button id="toggle-button" class="primary-action" type="button">재생</button>
+                <button id="stop-button" class="secondary-action" type="button">정지</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="timer-panel" class="timer-panel" aria-label="재생 시간">
+        <span id="timer-label">재생 시간</span>
+        <div id="timer-options" class="timer-options"></div>
+    </section>
+
+    <section id="library-panel" class="library-panel" aria-label="자장가 목록">
+        <div class="filter-tabs">
+            <button class="filter-tab active" type="button" data-filter="all"></button>
+            <button class="filter-tab" type="button" data-filter="favorites"></button>
+        </div>
+        <div id="track-list" class="track-list"></div>
+        <p id="license-notice" class="license-notice">
+            자장가·클래식: Pixabay / Wikimedia Commons. 화이트노이즈·자연음: Wikimedia Commons.
+            각 음원의 세부 출처는 곡 선택 시 표시됩니다.
+        </p>
+    </section>
+
+    <audio id="audio-player" preload="none"></audio>
+</main>
+
+<script src="i18n.js"></script>
+<script src="tracks.js"></script>
+<script src="app.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5f6b1ed2d6f141398e6afb4a1f8264cb","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
